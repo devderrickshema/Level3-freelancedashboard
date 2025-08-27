@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Level3-freelancedashboard/static/css/main.76fa5c74.css",
+    "main.js": "/Level3-freelancedashboard/static/js/main.76c2cdf6.js",
+    "index.html": "/Level3-freelancedashboard/index.html",
+    "main.76fa5c74.css.map": "/Level3-freelancedashboard/static/css/main.76fa5c74.css.map",
+    "main.76c2cdf6.js.map": "/Level3-freelancedashboard/static/js/main.76c2cdf6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76fa5c74.css",
+    "static/js/main.76c2cdf6.js"
+  ]
+}
