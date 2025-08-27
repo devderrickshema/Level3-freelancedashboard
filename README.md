@@ -54,8 +54,6 @@ This dashboard helps freelance professionals manage projects, track earnings, an
    ```bash
    # If you have the project in a zip file, extract it
    # If you're copying the files, create a new directory
-   mkdir freelance-admin-dashboard
-   cd freelance-admin-dashboard
    ```
 
 2. **Install dependencies**
