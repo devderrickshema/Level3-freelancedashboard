@@ -87,6 +87,3 @@ jspm_packages/
 # DynamoDB Local files
 .dynamodb/
 
-EXPANSION_ROADMAP.md
-QUICK_START.md
-TROUBLESHOOTING.md
