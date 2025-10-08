@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { notifications } from '../../data/mockData';
 
 const Header = ({ toggleSidebar }) => {
@@ -62,8 +63,16 @@ const Header = ({ toggleSidebar }) => {
 
             {showNotifications && (
               <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 z-50">
-                <div className="p-4 border-b border-gray-200">
+                <div className="p-4 border-b border-gray-200 flex justify-between items-center">
                   <h3 className="text-lg font-medium text-gray-900">Notifications</h3>
+                  <button
+                    onClick={() => setShowNotifications(false)}
+                    className="text-gray-400 hover:text-gray-500 focus:outline-none"
+                  >
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
                 <div className="max-h-96 overflow-y-auto">
                   {notifications.slice(0, 3).map((notification) => (
@@ -103,11 +112,13 @@ const Header = ({ toggleSidebar }) => {
 
           {/* Profile dropdown */}
           <div className="flex items-center">
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              alt="User avatar"
-            />
+            <Link to="/profile">
+              <img
+                className="w-8 h-8 rounded-full cursor-pointer hover:opacity-80 transition-opacity"
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                alt="User avatar"
+              />
+            </Link>
           </div>
         </div>
       </div>

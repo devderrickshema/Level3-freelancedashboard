@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { userProfile } from '../data/mockData';
+import ImageUploader from '../components/UI/ImageUploader';
 
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -64,9 +65,15 @@ const Profile = () => {
               <p className="text-sm text-gray-500 mt-1">{formData.location}</p>
               
               {isEditing && (
-                <button className="mt-4 btn-secondary text-sm">
-                  Change Photo
-                </button>
+                <ImageUploader
+                  currentImage={formData.avatar}
+                  onImageChange={(imageUrl) => {
+                    setFormData(prev => ({
+                      ...prev,
+                      avatar: imageUrl
+                    }));
+                  }}
+                />
               )}
             </div>
             

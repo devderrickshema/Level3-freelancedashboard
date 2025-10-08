@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ProjectDetailsModal from './ProjectDetailsModal';
+import ProjectEditModal from './ProjectEditModal';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onProjectUpdate }) => {
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
   const getStatusColor = (status) => {
     switch (status) {
       case 'Completed':
@@ -63,9 +67,37 @@ const ProjectCard = ({ project }) => {
       
       {/* Action Buttons */}
       <div className="flex space-x-2 mt-4">
-        <button className="btn-primary text-sm">View Details</button>
-        <button className="btn-secondary text-sm">Edit</button>
+        <button
+          className="btn-primary text-sm"
+          onClick={() => setShowDetailsModal(true)}
+        >
+          View Details
+        </button>
+        <button
+          className="btn-secondary text-sm"
+          onClick={() => setShowEditModal(true)}
+        >
+          Edit
+        </button>
       </div>
+
+      {/* Modals */}
+      <ProjectDetailsModal
+        isOpen={showDetailsModal}
+        onClose={() => setShowDetailsModal(false)}
+        project={project}
+      />
+
+      <ProjectEditModal
+        isOpen={showEditModal}
+        onClose={() => setShowEditModal(false)}
+        project={project}
+        onSave={(updatedProject) => {
+          if (onProjectUpdate) {
+            onProjectUpdate(updatedProject);
+          }
+        }}
+      />
     </div>
   );
 };
