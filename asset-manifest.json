@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Level3-freelancedashboard/static/css/main.76fa5c74.css",
-    "main.js": "/Level3-freelancedashboard/static/js/main.76c2cdf6.js",
+    "main.css": "/Level3-freelancedashboard/static/css/main.f0ca2c58.css",
+    "main.js": "/Level3-freelancedashboard/static/js/main.2a3b1f4d.js",
     "index.html": "/Level3-freelancedashboard/index.html",
-    "main.76fa5c74.css.map": "/Level3-freelancedashboard/static/css/main.76fa5c74.css.map",
-    "main.76c2cdf6.js.map": "/Level3-freelancedashboard/static/js/main.76c2cdf6.js.map"
+    "main.f0ca2c58.css.map": "/Level3-freelancedashboard/static/css/main.f0ca2c58.css.map",
+    "main.2a3b1f4d.js.map": "/Level3-freelancedashboard/static/js/main.2a3b1f4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.76fa5c74.css",
-    "static/js/main.76c2cdf6.js"
+    "static/css/main.f0ca2c58.css",
+    "static/js/main.2a3b1f4d.js"
   ]
 }
